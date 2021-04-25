@@ -156,8 +156,13 @@ p {
 .section{
     padding: 50px;
     text-align: center;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: auto;
+}
+
+.section__container {
+    max-width: 1200px;
+    margin:auto;
 }
 
 /* About */
@@ -221,4 +226,59 @@ p {
 }
 .job__period{
     font-size: var(--font-micro);
+}
+
+#skills{
+    background-color: var(--color-yellow);
+}
+
+.skillset{
+    display:flex;
+    background-color: var(--color-light-grey);
+    color:var(--color-light-white);
+    margin:20px 0;
+}
+
+.skillset__title{
+    color:var(--color-white);
+}
+.skillset__left{
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+}
+
+.skill{
+    margin-bottom: 8px;
+    padding: 20px 40px;
+
+}
+
+.skill__description{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__value{
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+.skillset__right{
+    flex-basis: 40%;
+}
+
+.tools{
+    background-color: var(--color-grey);
+}
+
+.tools, 
+.etc{
+    padding:20px;
 }
