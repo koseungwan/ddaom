@@ -375,6 +375,46 @@ p {
     height: 2px;
     margin-left: -12px;
     margin-top: 8px;
-    background-color: var(--color-dark-grey);
-    
+    background-color: var(--color-dark-grey);  
+}
+
+/* Testimonial */
+#testimonials{
+    background-color: var(--color-light-white);
+}
+
+.testimonials{
+    margin: 40px;
+}
+
+.testimonial{
+    display: flex;
+    margin: 32px 0;
+}
+
+.testimonials__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 12px;
+}
+
+.testimonials__avatar:nth-child(odd) {
+    margin-right: 40px;
+}
+.testimonials__avatar:nth-child(even) {
+    margin-left: 40px;
+}
+.testimonials__Speech-bubble {
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.testimonials__Speech-bubble p {
+    color: var(--color-light-grey);
+}
+
+.testimonials__Speech-bubble a {
+    color: var(--color-pink);
 }
