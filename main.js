@@ -12,6 +12,7 @@ document.addEventListener('scroll',() => {
     }
 });
 
+
 // Handle Scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -20,16 +21,24 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null){
         return;
     }
-
-    console.log(event.target.dataset.link);
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
-})
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('open');
+});
+
 
 // handle click on "contact me" button on home
-const homecontact = document.querySelector('.home__contact');
-homecontact.addEventListener('click', () => {
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
-    })
+    });
+
+
 // make home slowly fade to trasparent as the window scrolls down
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;

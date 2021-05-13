@@ -39,10 +39,8 @@ box-sizing: border-box;
 }
 
 body{
-    margin: 0;
     font-family: 'opne sans' , sans-serif;
     margin: 0;
-    cursor: default;
 }
 
 a{
@@ -51,7 +49,6 @@ a{
 }
 
 ul{
-    list-style: none;
     padding-left: 0;
 }
 
@@ -64,6 +61,7 @@ button {
     cursor: pointer;
     border: none;
     outline: none;
+    padding: 0;
 }
 /* Tyography */
 h1 {
@@ -97,10 +95,9 @@ p {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
     align-items: center;
     padding: 16px;
-    color: var(--color-white);
+    background-color: transparent;
     transition: var(--animation-duration) ease-in-out;
     z-index: 1;
 }
@@ -110,17 +107,20 @@ p {
     padding: 8px;
 }
 
+.navbar__logo{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: white;
+}
 .navbar__menu{
     display: flex;
 }
 
-.navbar__logo{
-    font-size: var(--font-large);
-    font-weight: var(--weight-semi-bold);
-}
+
 .navbar__menu__item{
     padding: 8px 12px;
     margin: 0 4px;
+    color: var(--color-white);
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: var(--size-border-radius);
@@ -391,17 +391,17 @@ p {
     transform: translateY(0px);
 }
 .project__description h3 {
-    color:var(--color-white);
+    color:var(--color-orange);
 }
 
 .project__description h3::after {
     content: '';
     display: block;
     position: relative;
-    left: 50%;
-    width: 25px;
+    left: 40%;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateY(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-grey);  
 }
@@ -499,20 +499,33 @@ p {
 
 /* for below 768px screen width */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .navbar__toggle-btn{
         display: block;
-    }
-    #navbr {
-        flex-direction: column;
-        align-items: flex-start;
+        top: 16px;
+        right: 16px;
+        font-size:var(--font-medium);
     }
 
-    .navbar__menu{
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-pink);
+    }
+
+    #navbar.navbar--dark {
+        padding: 16px;
+    }
+    
+    .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors{
