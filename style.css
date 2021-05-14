@@ -152,7 +152,7 @@ p {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 2px solid var(--color-light-white)
+    border: 2px solid var(--color-light-white);
 }
 
 .home__title,
@@ -168,6 +168,10 @@ p {
     padding: 8px 12px;
     border: 2px solid var(--color-light-white);
     border-radius:var(--size-border-radius);
+}
+
+.home__contact:hover {
+    background-color: var(--color-orange);
 }
 
 /* Section common*/
@@ -312,6 +316,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding:8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -333,9 +338,9 @@ p {
     height:24px;
     line-height:24px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top:-20px;
-    left:4px;
+    right:16px;
     opacity: 0;
     transition:all  var(--animation-duration) ease-in;
 }
@@ -500,6 +505,14 @@ p {
 /* for below 768px screen width */
 
 @media screen and (max-width: 768px) {
+    :root {
+          /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px; 
+    }
     .navbar__toggle-btn{
         display: block;
         top: 16px;
@@ -527,25 +540,56 @@ p {
     .navbar__menu.open {
         display: block;
     }
-
+    .section {
+        padding: 16px;
+        padding-top: 40px;
+    }
     .about__majors{
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
 
     .major {
-        margin-top: 38px;
+        margin-top: 30px;
     }
 
     .skillset {
         flex-direction: column;
+    }
+
+    .category__btn {
+        margin: 4px 0;
     }
     
     .project {
         flex-grow: 1;
     }
 
-    .testimonials__avatar{
-        width: 80px;
-        height: 80px;
+    .testimonial{
+        flex-direction: column;
+        align-items: center;
     }
+    .testimonials__avatar{
+        width: 120px;
+        height: 120px;
+    }
+    .testimonials__avatar:nth-child(even),
+    .testimonials__avatar:nth-child(odd) {
+        margin:0;
+        margin-bottom: 8px;
+    }
+    .testimonials__Speech-bubble{
+        order:1;
+    }
+    .arrow-up{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
+    
+    }
+        
 }
