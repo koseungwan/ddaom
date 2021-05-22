@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "ddaom"
+    "liveServer.settings.multiRootWorkspaceName": "ddaom",
+    "svn.ignoreMissingSvnWarning": true
 }
